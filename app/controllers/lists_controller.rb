@@ -6,6 +6,9 @@ class ListsController < ApplicationController
         @list = List.new(strong_params)
         @list.save
     end
+    def index
+        @lists = List.all
+    end
 
     private
 
