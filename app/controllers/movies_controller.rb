@@ -6,6 +6,9 @@ class MoviesController < ApplicationController
         @movie = Movie.new(strong_params)
         @movie.save
     end
+    def index
+        @movies = Movie.all
+    end
 
     private
 

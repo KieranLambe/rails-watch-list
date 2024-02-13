@@ -6,6 +6,9 @@ class BookmarksController < ApplicationController
         @bookmark = Bookmark.new(strong_params)
         @bookmark.save
     end
+    def index
+        @bookmarks = Bookmark.all
+    end
 
     private
 
